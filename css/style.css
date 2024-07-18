@@ -280,16 +280,9 @@ footer {
 }
 
 @media (max-width: 460px) {
-  #navbar {
-    justify-content: center;
-  }
-  .nav-link {
-    margin: auto 24px;
-  }
-  #projects-grid {
-    display: block;
-  }
-  .project-tile:not(:last-child) {
-    margin-bottom: 24px;
-  }
+  #welcome-section img{
+    margin-top: 25vh;
+  max-width: 500px;
+  width: 80vw;
+}
 }
