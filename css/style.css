@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/anne-margaret');
 /*@import url('https://fonts.cdnfonts.com/css/white-dream');
 */
+@import url('https://fonts.cdnfonts.com/css/david-libre');
 @font-face {
     font-family: 'White Dream';
     src: url('../fonts/WhiteDream-Regular.otf') format('truetype');
@@ -52,6 +53,18 @@ a {
 
 h2 {
     color: #CB945F;
+    text-align: center;
+}
+
+section {
+  padding: 0 5vw;
+}
+
+p {
+  text-align: center;
+  font-family: 'David Libre', sans-serif;
+  font-weight: lighter;
+  color: #DCDCD9;
 }
 
 
@@ -63,16 +76,16 @@ h2 {
 }
 
 
-#welcome-section {
-  /*height: 100vh;
-*/}
+/* #welcome-section {
+  height: 100vh;
+} */
 
 #welcome-section h1 {
   font-size: 3.6rem;
 }
 
 #welcome-section img,
-#closing img {
+#closing img.santih {
   max-width: 500px;
   width: 45vw;
 }
@@ -87,35 +100,18 @@ h2 {
 }
 
 #opening-section {
-  width: 100%;
   min-height: 40vh;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #opening-section img:nth-child(1) {
   max-width: 100px;
-  width: 10vw;
+  width: 20vw;
 }
 
 #opening-section img:nth-child(2) {
   max-width: 200px;
-  width: 20vw;
-}
-
-img.flowergold {
-  width: 25vw;
-  max-width: 300px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#closing img.flowergold2 {
-  width: 25vw;
-  max-width: 300px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  width: 30vw;
 }
 
 #opening-section h2, 
@@ -144,6 +140,18 @@ img.flowergold {
   margin: 20px 0;
 }
 
+#closing img.santih {
+  margin: 30px 0;
+}
+
+#closing h3 {
+  font-family: 'Anne Margaret', sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  color: #CB945F;
+  text-align: center;
+}
+
 #countdown,
 #opening-section {
   position: relative;
@@ -151,6 +159,7 @@ img.flowergold {
 
 #countdown {
   margin-top: 100px;
+  position: relative;
 }
 
 #countdown h2 {
@@ -160,18 +169,19 @@ img.flowergold {
 
 .float-d {
   position: absolute;
-  top: -40px;
+  top: -20px;
   width: 10vw;
+  max-width: 80px;
 }
 
-#time {
+#date {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 100px;
 }
 
-#time span {
+#date span {
   width: 100%;
   text-align: center;
   font-family: 'Anne Margaret', sans-serif;
@@ -185,10 +195,88 @@ img.flowergold {
   color: #CB945F;
 }
 
-#time span#pop {
+#date span#pop {
   border: 0;
   font-size: 4.5rem;
   margin: 0 1rem;
+}
+
+
+#timeaddr,
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time,
+.address {
+  width: 100%;
+  min-height: 30vh;
+  padding: 2vw;
+  text-align: center;
+  border: 2px solid #CB945F;
+  border-radius: 2vw;
+  outline: 2px solid #CB945F;
+  outline-offset: 2px;
+  margin: 2vw;
+}
+
+#timeaddr i {
+  color: #CB945F;
+  margin-bottom: 50px;
+}
+
+.counter {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.counter span {
+  display: block;
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(180deg, #704f30, #CB945F);
+  border-radius: 2vw;
+  margin: 50px 0;
+}
+
+#countdown iframe {
+  width: 100%;
+  max-width: 1180px;
+  height: 35vh;
+  border: 8px solid #CB945F;
+}
+
+.button {
+  display: block;
+  padding: 16px 40px;
+  background: linear-gradient(180deg, #704f30, #CB945F);
+  border-radius: 8px;
+  margin: 25px 0;
+  color: var(--black);
+  font-weight: 600;
+  font-family: 'David Libre', sans-serif;
+  font-style: italic;
+}
+
+
+
+
+img.flowergold {
+  width: 40vw;
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+img.flowergold2 {
+  width: 40vw;
+  max-width: 300px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /**
@@ -204,8 +292,6 @@ img.flowergold {
   padding: 36px 0 12px;
   border-bottom: 1px solid var(--white);
   /*font-family: 'Anne Margaret', sans-serif;*/
-  font-family: 'White Dream', sans-serif;
-}
 /**
 #projects-grid {
   display: grid;
@@ -282,7 +368,11 @@ footer {
 @media (max-width: 460px) {
   #welcome-section img{
     margin-top: 25vh;
-  max-width: 500px;
-  width: 80vw;
-}
+    max-width: 500px;
+    width: 80vw;
+  }
+
+  .float-d {
+    top: -10px;
+  }
 }
