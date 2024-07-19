@@ -32,6 +32,13 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
   background: linear-gradient(180deg, var(--bg), var(--black));
+  height: 100%;
+  overflow: hidden;
+}
+
+html.scrollable {
+  height: auto;
+  overflow: auto;
 }
 
 body {
@@ -324,11 +331,11 @@ footer {
   background-color: #1d2333;
   overflow: hidden;
   transition: 0.5s;
-  padding-top: 15vh;
+  padding-top: 12vh;
 }
 
 #overlay img {
-  min-width: 350px;
+  min-width: 300px;
   max-width: 25vw;
   margin-bottom: 50px;
   display: block;
