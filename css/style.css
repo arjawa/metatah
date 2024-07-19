@@ -32,7 +32,6 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
   background: linear-gradient(180deg, var(--bg), var(--black));
-  max-width: 100vw;
 }
 
 body {
