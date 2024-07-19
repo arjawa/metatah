@@ -23,7 +23,7 @@
     <section id="opening-section" class="flex-center">
       <img data-aos="zoom-in" data-aos-duration="2000" src="img/swastika12.png" alt="Swastika" border="0">
       <img data-aos="zoom-in" data-aos-duration="2000" src="img/swastyastu.png" alt="Swastyastu" border="0">
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
+      <img data-aos="fade-left" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
 
       <h2 data-aos="zoom-in" data-aos-duration="2000">Om Swastyastu</h2>
       <p data-aos="zoom-in" data-aos-duration="2000">Atas Asung Kertha Wara Nugraha<br>
@@ -70,12 +70,12 @@
         <img src="img/g-divider1.png">
       </div>
 
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
+      <img data-aos="fade-right" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
 
     </section>
 
     <section id="countdown" class="flex-center">
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
+      <img data-aos="fade-left" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
       <img data-aos="zoom-in" data-aos-duration="2000" src="img/leaves-gold-divider.png" class="float-d" alt="divider" border="0">
       <h2 data-aos="zoom-in" data-aos-duration="2000" class="logotext">Mepandes</h2>
       <div data-aos="zoom-in" data-aos-duration="2000" id="date">
@@ -99,20 +99,30 @@
       </div>
       <iframe data-aos="zoom-in" data-aos-duration="2000" src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3946.9298381659823!2d115.31163700000002!3d-8.408552!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMjQnMzAuNiJTIDExNcKwMTgnNDcuOCJF!5e0!3m2!1sen!2sus!4v1721314320750!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <a data-aos="zoom-in" data-aos-duration="2000" class="button" href="https://www.google.com/maps?ll=-8.408552,115.311637&z=16&t=m&hl=en&gl=US&mapclient=embed&q=8%C2%B024%2730.6%22S+115%C2%B018%2747.8%22E+-8.408500,+115.313278@-8.4085,115.3132778"><i class="fa-solid fa-location-dot"></i>Petunjuk Ke Lokasi</a>
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
+      <img data-aos="fade-right" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
     </section>
 
     <section id="quotes" class="flex-center">
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
+      <img data-aos="fade-left" data-aos-duration="500" src="img/flowergold1.png" class="flowergold" alt="Flowergold" border="0">
       <i data-aos="zoom-in" data-aos-duration="2000" class="fa-solid fa-quote-left fa-3x"></i>
       <p data-aos="zoom-in" data-aos-duration="2000">“Dengan Yadnya, semoga kami memperoleh sifat-sifat kemuliaan, kejayaan, kekuatan rohani, kekuatan jasmani,
         kesejahteraan dan perlindungan”</p>
       <img data-aos="zoom-in" data-aos-duration="2000" src="img/flower123.png" class="flower" alt="Flower">
       <p data-aos="zoom-in" data-aos-duration="2000">(Yayurweda XV.113) </p>
-      <img data-aos="zoom-in" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
+      <img data-aos="fade-right" data-aos-duration="500" src="img/flowergold2.png" class="flowergold2" alt="Flowergold" border="0">
     </section>
     
   </main>
+
+  <section id="overlay">
+    <div class="overlay-content flex-center">
+      <img src="img/overlay.png" alt="overlay">
+      <p>Yth. Kepada Bpk/Ibu/Saudara/i</p>
+      <h3 id="invited"></h3>
+      <a href="javascript:void(0)" class="button" onclick="closeOverlay()">Buka Undangan</a>
+      <p> Mohon maaf apabila ada kesalahan penulisan nama/gelar </p>
+    </div>
+  </section>
   
   <footer>
     <p>&copy;2024 | rjw</p>
@@ -121,6 +131,13 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    function closeOverlay() {
+      document.getElementById("overlay").classList.toggle("hidden")
+    }
+
+    const URLParams = new URLSearchParams(window.location.search)
+    document.getElementById("invited").innerText = URLParams.get("to")
   </script>
 
 </body>

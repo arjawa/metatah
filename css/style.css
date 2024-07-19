@@ -313,6 +313,52 @@ footer {
 
 }
 
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #1d2333;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 25vh;
+}
+
+#overlay img {
+  min-width: 350px;
+  max-width: 25vw;
+  margin-bottom: 50px;
+  display: block;
+}
+
+#overlay.hidden {
+  padding: 0;
+  height: 0;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  top: 100%;
+}
+
+#overlay-content {
+  position: relative;
+  top: 30vh;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+#invited {
+  font-family: "Anne Margaret", sans-serif;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
 @media (max-width: 2160px) {
   #quotes {
     max-height: 100vh;
