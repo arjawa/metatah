@@ -251,6 +251,13 @@ p {
   background: linear-gradient(180deg, #704f30, #CB945F);
   border-radius: 2vw;
   margin: 50px 0;
+  font-family: "Anne Margaret", Sans-Serif;
+  color: #CB945F;
+  font-weight: 200;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #countdown iframe {
@@ -406,7 +413,7 @@ footer {
     max-width: 120px;
   }
 
-  .counter span {
+  .counter div {
     width: 80px;
     height: 50px;
   }
