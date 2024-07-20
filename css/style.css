@@ -250,11 +250,11 @@ p {
   height: 100px;
   background: linear-gradient(180deg, #704f30, #CB945F);
   border-radius: 2vw;
-  margin: 50px 0;
+  margin: 50px 10px;
   font-family: "David Libre", Sans-Serif;
   color: #DCDCD9;
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
