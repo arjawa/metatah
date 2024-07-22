@@ -1,3 +1,4 @@
+/* fonts */
 @import url('https://fonts.cdnfonts.com/css/anne-margaret');
 @import url('https://fonts.cdnfonts.com/css/david-libre');
 @font-face {
@@ -8,12 +9,12 @@
 }
 
 :root {
-  --green: #69AD60;
-  --dark: #2C2C2C;
   --black: #1B1B1B;
   --white: #ffffff;
-  --blue: #585F92;
   --bg: #1d2333;
+  --primary: #CB945F;
+  --text-color: #DCDCD9;
+  --shadow-gradient: #704f30;
 }
 
 * {
@@ -57,7 +58,7 @@ a {
 }
 
 h2 {
-    color: #CB945F;
+    color: var(--primary);
     text-align: center;
 }
 
@@ -69,9 +70,8 @@ p {
   text-align: center;
   font-family: 'David Libre', sans-serif;
   font-weight: lighter;
-  color: #DCDCD9;
+  color: var(--text-color);
 }
-
 
 .flex-center {
   display: flex;
@@ -81,20 +81,19 @@ p {
 }
 
 
-/* #welcome-section {
-  height: 100vh;
-} */
-
-#welcome-section h1 {
+/* LANDING PAGE */
+#landing h1 {
   font-size: 3.6rem;
 }
 
-#welcome-section img,
-#closing img.santih {
+#landing img,
+#family img.santih {
   max-width: 500px;
   width: 45vw;
 }
 
+
+/* divider */
 #divider {
   margin: 50px;
 }
@@ -104,62 +103,74 @@ p {
   max-width: 500px;
 }
 
-#opening-section {
+
+/* OPENING */
+#opening {
   min-height: 60vh;
   justify-content: space-evenly;
   padding: 10vw 5vw;
 }
 
-#opening-section img:nth-child(1) {
+#opening img:nth-child(1) {
   max-width: 100px;
   width: 20vw;
 }
 
-#opening-section img:nth-child(2) {
+#opening img:nth-child(2) {
   max-width: 200px;
   width: 30vw;
 }
 
-#opening-section h2, 
-#name-section h2,
-#closing h2  {
+#opening h2, 
+#main-section h2,
+#family h2  {
   font-family: 'Anne Margaret', sans-serif;
   font-size: 2.2rem;
   font-weight: 200;
 }
 
-#opening-section p, #name-section p {
+#opening p, #main-section p {
   text-align: center;
 }
 
 
-#name-section {
+
+/* MAIN SECTION */
+#main-section {
   margin: 50px;
 }
 
-#closing {
+#main-section h2 {
+  margin-bottom: 8px;
+}
+
+
+/* FAMILY SECTION */
+#family {
   position: relative;
 }
 
-#closing p {
+#family p {
   text-align: center;
   margin: 20px 0;
 }
 
-#closing img.santih {
+#family img.santih {
   margin: 30px 0;
 }
 
-#closing h3 {
+#family h3 {
   font-family: 'Anne Margaret', sans-serif;
   font-size: 2.2rem;
   font-weight: 200;
-  color: #CB945F;
+  color: var(--primary);
   text-align: center;
 }
 
+
+/* COUNTDOWN & TIMER */
 #countdown,
-#opening-section {
+#opening {
   position: relative;
 }
 
@@ -179,6 +190,7 @@ p {
   margin-top: 10vw;
 }
 
+/* floating flower */
 .float-d {
   position: absolute;
   top: -20px;
@@ -198,13 +210,13 @@ p {
   text-align: center;
   font-family: 'Anne Margaret', sans-serif;
   font-size: 3rem;
-  border-top: 2px solid #CB945F;
-  border-bottom: 2px solid #CB945F;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
-  color: #CB945F;
+  color: var(--primary);
 }
 
 #date span#pop {
@@ -212,7 +224,6 @@ p {
   font-size: 5rem;
   margin: 0 1rem;
 }
-
 
 #timeaddr,
 .counter {
@@ -227,15 +238,15 @@ p {
   min-height: 30vh;
   padding: 2vw;
   text-align: center;
-  border: 2px solid #CB945F;
+  border: 2px solid var(--primary);
   border-radius: 2vw;
-  outline: 2px solid #CB945F;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
   margin: 2vw;
 }
 
 #timeaddr i {
-  color: #CB945F;
+  color: var(--primary);
   margin-bottom: 50px;
 }
 
@@ -248,11 +259,11 @@ p {
   display: block;
   width: 180px;
   height: 100px;
-  background: linear-gradient(180deg, #704f30, #CB945F);
+  background: linear-gradient(180deg, var(--shadow-gradient), var(--primary));
   border-radius: 2vw;
   margin: 50px 4px;
   font-family: "David Libre", Sans-Serif;
-  color: #DCDCD9;
+  color: var(--text-color);
   font-weight: 200;
   font-size: 1.8rem;
   display: flex;
@@ -264,13 +275,13 @@ p {
   width: 100%;
   max-width: 1180px;
   height: 35vh;
-  border: 8px solid #CB945F;
+  border: 8px solid var(--primary);
 }
 
 .button {
   display: block;
   padding: 16px 40px;
-  background: linear-gradient(180deg, #704f30, #CB945F);
+  background: linear-gradient(180deg, var(--shadow-gradient), var(--primary));
   border-radius: 8px;
   margin: 25px 0;
   color: var(--black);
@@ -283,10 +294,17 @@ p {
   margin-right: 10px;
 }
 
+.button:hover {
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
 
+
+
+/* QUOTES */
 #quotes {
   position: relative;
-  color: #CB945F;
+  color: var(--primary);
   min-height: 60vh;
   justify-content: space-evenly;
   padding: 15vh auto;
@@ -297,6 +315,7 @@ p {
 }
 
 
+/* DECORATION */
 img.flowergold {
   width: 40vw;
   max-width: 300px;
@@ -320,14 +339,7 @@ footer {
 }
 
 
-
-.button:hover {
-  transform: scale(1.1);
-  transition-duration: 1s;
-
-}
-
-
+/* OVERLAY */
 #overlay {
   height: 100%;
   width: 100%;
@@ -335,7 +347,7 @@ footer {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: #1d2333;
+  background-color: var(--bg);
   overflow: hidden;
   transition: 0.5s;
   padding-top: 12vh;
@@ -373,6 +385,8 @@ footer {
   margin-top: 20px;
 }
 
+
+/* RESPONSIVE */
 @media (max-width: 2160px) {
   #quotes {
     max-height: 100vh;
@@ -398,7 +412,7 @@ footer {
 }
 
 @media (max-width: 460px) {
-  #welcome-section img{
+  #landing img{
     margin-top: 20vh;
     width: 90vw;
   }
@@ -418,8 +432,7 @@ footer {
     height: 50px;
   }
 
-  #closing img.santih {
+  #family img.santih {
     width: 70vw;
   }
-  
 }
