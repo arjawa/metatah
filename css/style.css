@@ -338,6 +338,14 @@ footer {
   padding: 24px;
 }
 
+footer a {
+  color: var(--text-color);
+  text-decoration: line-through;
+  text-align: center;
+  font-family: 'David Libre', sans-serif;
+  font-weight: lighter;
+}
+
 
 /* OVERLAY */
 #overlay {
