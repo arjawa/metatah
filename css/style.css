@@ -361,6 +361,7 @@ footer a {
   overflow: hidden;
   transition: 0.5s;
   padding-top: 12vh;
+  z-index: 30;
 }
 
 #overlay img {
