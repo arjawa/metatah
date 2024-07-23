@@ -125,7 +125,7 @@ p {
 #main-section h2,
 #family h2  {
   font-family: 'Anne Margaret', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 200;
 }
 
@@ -276,6 +276,7 @@ p {
   max-width: 1180px;
   height: 35vh;
   border: 8px solid var(--primary);
+  z-index: 20;
 }
 
 .button {
@@ -288,6 +289,7 @@ p {
   font-weight: 600;
   font-family: 'David Libre', sans-serif;
   font-style: italic;
+  z-index: 20;
 }
 
 .button i {
